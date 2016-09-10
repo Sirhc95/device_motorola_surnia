@@ -145,8 +145,7 @@ void vendor_load_properties()
         property_set("ro.mot.build.customerid", "retbr");
     }
     std::string device = property_get("ro.product.device");
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found radio id: %s setting build properties for %s device\n", radio.c_str(), devicename.c_str());
+    INFO("Found radio id: %s setting build properties for %s device\n", radio.c_str(), device.c_str());
 }
 
 void cdma_properties()
